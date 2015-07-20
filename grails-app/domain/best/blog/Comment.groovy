@@ -1,7 +1,7 @@
 package best.blog
 import java.util.Date;
 
-class Comment implements Comparable {
+class Comment {
 	static belongsTo = Post
 	
 	Post post
