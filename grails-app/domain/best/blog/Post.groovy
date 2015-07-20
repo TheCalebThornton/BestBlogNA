@@ -6,7 +6,7 @@ import java.util.SortedSet;
 class Post {
 	
 	static hasMany = {comments:Comment}
-	//SortedSet comments
+	//SortedSet<Comment> comments
 	
 	String postName
 	String postContent
