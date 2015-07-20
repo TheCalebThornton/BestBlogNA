@@ -7,7 +7,7 @@ class BootStrap {
 		new Post(postName:"Frist Grails Project",
 			teaser:"Clearing out the clutter",
 			postContent:"The full content of the article",
-			isPublished:true).save()
+			isPublished:false).save()
 			
 		new Post(postName:"Frist Grails Project",
 			teaser:"Clearing out the clutter",

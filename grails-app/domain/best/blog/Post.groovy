@@ -15,8 +15,10 @@ class Post {
 	Date lastUpdated
 	
 	static constraints = {
-		postName(nullable:false, blank: false, length:1..50)
+		postName(nullable:false, blank:false, length:1..50)
 		teaser(length:1..100)
-		postContent(nullable: false)
+		postContent(nullable:false, blank:false, length:1..2000)
+		lastUpdated(nullable:true)
+		isPublished(nullable:false)
 	}
 }

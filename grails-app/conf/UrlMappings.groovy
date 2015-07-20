@@ -7,8 +7,10 @@ class UrlMappings {
             }
         }
 
-		//"/"(view:"/index")
-		"/"(controller:'post')
+		"/post/view/$title?" (controller:"post", action:"view")
+
+        "/"(controller:'post', action:'/list')
+		 "/"(controller:'post')
         "500"(view:'/error')
 	}
 }

@@ -6,7 +6,7 @@ class Comment implements Comparable {
 	
 	Post post
 	String comment
-	String author
+	Commentator who = new Commentator()
 	Date dateCreated
 	
 	static constraints = {
