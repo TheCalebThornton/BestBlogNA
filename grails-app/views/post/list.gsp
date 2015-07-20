@@ -8,7 +8,7 @@
 	
 	<g:each in="${posts}" var="post">
 		<div>
-			<h2>${post.postName}</h2>
+			<h2>${post.title}</h2>
 			<p>${post.teaser}</p>
 			<p>Last Update: ${post.lastUpdated}</p>
 		</div>
