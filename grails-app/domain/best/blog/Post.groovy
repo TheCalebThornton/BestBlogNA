@@ -17,6 +17,6 @@ class Post {
 	static constraints = {
 		postName(nullable:false, blank: false, length:1..50)
 		teaser(length:1..100)
-		postContent(nullable: false)
+		postContent(nullable: false, length:1..4000)
 	}
 }
