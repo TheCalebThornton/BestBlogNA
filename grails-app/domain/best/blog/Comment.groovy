@@ -5,7 +5,7 @@ class Comment implements Comparable {
 	static belongsTo = Post
 	
 	Post post
-	String comment
+	String commentContent
 	Commentator who = new Commentator()
 	Date dateCreated
 	

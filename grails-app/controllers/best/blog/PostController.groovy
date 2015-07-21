@@ -24,25 +24,26 @@ class PostController {
 	}
 
 	
-//	def save = {
-//		def editPost = params
-//		def post = loadPost(params.id)
-//		post.postName = editPost.postName
-//		post.postContent = editPost.postContent
-//		post.teaser = editPost.teaser
-//
-//		if(post.save(true)) {
-//			redirect(action:'list')
-//		} else {
-//			render(view:'edit', model:[post:post])
-//		}
-//	}
-	def save = { 
-		def post = loadPost(params.id) 
-		post.properties = params 
-		if(post.save()) { redirect(action:'list') } 
-		else { render(view:'edit', model:[post:post]) } 
+	def save = {
+		def editPost = params
+		def post = loadPost(params.id)
+		post.postName = editPost.postName
+		post.postContent = editPost.postContent
+		post.teaser = editPost.teaser
+
+		//Codehaus hosted this method apparently
+		if(post.save(true)) {
+			redirect(action:'list')
+		} else {
+			render(view:'edit', model:[post:post])
 		}
+	}
+//	def save = { 
+//		def post = loadPost(params.id) 
+//		post.poperties = params 
+//		if(post.save()) { redirect(action:'list') } 
+//		else { render(view:'edit', model:[post:post]) } 
+//		}
 	def delete = {
 		//TODO Create Delete Function
 		def editPost = params
