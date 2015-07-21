@@ -50,7 +50,7 @@ img {
 					<dl>
 						<dt>Post Title:</dt>
 						<dd>
-							<g:textField name="name" value="${post.postName}" size="50" />
+							<g:textField name="postName" value="${post.postName}" size="50" />
 						</dd>
 						<dt>Post Teaser:</dt>
 						<dd>
@@ -58,11 +58,12 @@ img {
 						</dd>
 						<dt>Content:</dt>
 						<dd>
-							<g:textArea name="content" value="${post.postContent}" rows="20"
+							<g:textArea name="postContent" value="${post.postContent}" rows="20"
 								cols="50" />
 						</dd>
 					</dl>
-					<g:submitButton name="submit" value="save"/>
+					<g:submitButton name="submit" value="Save"/>
+					<g:actionSubmit name="delete" action="delete" value="Delete"/>
 				</g:form>
 			</div>
 			<div class="col-sm-4">
