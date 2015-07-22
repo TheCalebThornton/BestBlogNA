@@ -11,33 +11,34 @@ import spock.lang.Specification
 class CommentSpec extends Specification {
 
 	
-	void 'test valid command object'(){
-		given:
-		def comment = new Comment(name: 'Hugh')
-		simpleCommand.validate()
-		
+	void 'test commentContent'(){
 		when:
-		controller.handleCommand(simpleCommand)
+		def comment = new Comment(commentContent: 'This test is testless. I could test a better test in my test.')
 		
 		then:
-		response.text =='Good'
+		comment.validate(["commentContent"])
+		
+		when:
+		comment.commentContent = ''
+		
+		then:
+		!comment.validate(["commentContent"])
+		
+		when:
+		comment.commentContent = 
+
+		then:
+		!comment.validate		
+		
 	}
 	
 	
 	
 	
-    void 'testing invalid Comment'() {
-		given:
-		def simpleCommand = new simpleCommand(name: '')
-		simpleCommand.validate()
-		
+    void 'test date'() {
 		when:
-		controller.handleCommand(simpleCommand)
-		
+		def comment = new Comment(dateCreated: null)
 		then:
-		response.text == 'Bad'
-		
-		
+		comment.validate(["dateCreated"])
 			}
-}
 }
