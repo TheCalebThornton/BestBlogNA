@@ -8,7 +8,7 @@ import grails.validation.Validateable
 class Comment implements Comparable{
 	static belongsTo = Post
 	
-	String comment
+	String commentContent
 	Commentator who = new Commentator()
 	Date dateCreated
 	
