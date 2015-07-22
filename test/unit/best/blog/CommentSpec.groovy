@@ -24,11 +24,19 @@ class CommentSpec extends Specification {
 		then:
 		!comment.validate(["commentContent"])
 		
+		
+		
 		when:
-		comment.commentContent = 
+		StringBuffer buffInput = new StringBuffer()
+		int i;
+		for(i=0;i<41;i++){
+			buffInput.append("xxxxx");
+		}
+		comment = new Comment(commentContent: buffInput.toString())
 
+		
 		then:
-		!comment.validate		
+		!comment.validate(["commentContent"])	
 		
 	}
 	

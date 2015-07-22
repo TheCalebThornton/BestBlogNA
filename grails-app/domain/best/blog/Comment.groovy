@@ -13,7 +13,7 @@ class Comment implements Comparable{
 	Date dateCreated
 	
 	static constraints = {
-		commentContent(nullable:false, blank:false, length:1..200)
+		commentContent(nullable:false, blank:false, size:1..200)
 		dateCreated(nullable:true)
 	}
 	
