@@ -66,7 +66,7 @@ img {
 						<g:each in="${post.comments}" var="comment">
 							<div class="comment">
 								<p>
-									${comment.commentContent }
+									${comment.comment }
 								</p>
 								<p>
 									Made by:
