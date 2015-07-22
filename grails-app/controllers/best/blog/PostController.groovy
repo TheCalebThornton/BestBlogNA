@@ -12,9 +12,9 @@ class PostController {
 		render(view:'edit', model:[post:post])
 	}
 
-	def postList = {
-		[posts: Post.list(params), postCount: Post.count()]
-	}
+//	def postList = {
+//		[posts: Post.list(params), postCount: Post.count()]	
+//	}
 	
 	def list = {
 		render(
@@ -30,28 +30,30 @@ class PostController {
 //		post.postName = editPost.postName
 //		post.postContent = editPost.postContent
 //		post.teaser = editPost.teaser
+//		if (editPost.isPublished == null){
+//			post.isPublished = false
+//		}
+//		else{
+//			post.isPublished = editPost.isPublished
+//		}
+//		post.comments = null
 //
-//		if(post.save(true)) {
+//		if(post.save(flush: true)) {
 //			redirect(action:'list')
 //		} else {
 //			render(view:'edit', model:[post:post])
 //		}
 //	}
+	//REKT
 	def save = { 
 		def post = loadPost(params.id) 
 		post.properties = params 
-		if(post.save()) { redirect(action:'list') } 
+		if(post.save(flush: true)) { redirect(action:'list') } 
 		else { render(view:'edit', model:[post:post]) } 
-		}
+	}
 	def delete = {
-		//TODO Create Delete Function
-		def editPost = params
 		def post = loadPost(params.id)
-		post.postName = editPost.postName
-		post.postContent = editPost.postContent
-		post.teaser = editPost.teaser
-
-		if(post.save(true)) {
+		if(post.delete(flush: true)) {
 			redirect(action:'list')
 		} else {
 			render(view:'edit', model:[post:post])

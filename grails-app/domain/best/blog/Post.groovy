@@ -6,8 +6,7 @@ import java.util.SortedSet;
 class Post {
 	
 	static hasMany = [comments:Comment]
-	SortedSet comments
-	
+	SortedSet comments	
 	String postName
 	String postContent
 	String teaser
@@ -20,5 +19,6 @@ class Post {
 		postContent(nullable:false, blank:false, size:1..2000)
 		lastUpdated(nullable:true)
 		isPublished(nullable:false)
+		comments(nullable:true)
 	}
 }

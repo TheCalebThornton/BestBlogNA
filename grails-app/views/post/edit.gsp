@@ -61,6 +61,10 @@ img {
 							<g:textArea name="postContent" value="${post.postContent}" rows="20"
 								cols="50" />
 						</dd>
+						<dt>Publish:</dt>
+						<dd>
+							<g:checkBox name="isPublished" value="${post.isPublished}" />
+						</dd>
 					</dl>
 					<g:submitButton name="submit" value="Save"/>
 					<g:actionSubmit name="delete" action="delete" value="Delete"/>
