@@ -6,7 +6,7 @@ class Commentator {
 	String name
 	String url
 	String email
-	Comment comment
+	//Comment comment
 	
     static constraints = {
 		name(nullable:false, blank:false)

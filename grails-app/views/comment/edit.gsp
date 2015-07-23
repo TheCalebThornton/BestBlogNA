@@ -31,11 +31,10 @@ img {
 							class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/BlogSite/">Aaron and John's
-						Blog.</a>
+					<a class="navbar-brand" href="/best-blog-NA/">Best Blog NA</a>
 
 				</div>
-				<div class="collapse navbar-collapse">
+	<!--			<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
 						<li><a href="/BlogSite/">Home</a></li>
 						<li><g:if test="${session.user}">
@@ -45,7 +44,7 @@ img {
 							</g:else></li>
 						<%--<li><a href="adultlink.html">Adult Link</a></li>--%>
 					</ul>
-				</div>
+				</div> -->
 			</div>
 		</nav>
 	</header>
@@ -53,8 +52,8 @@ img {
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-2">
-				<%--<img src="/BlogSite/images/Dance_cat.gif">
-			--%></div>
+			<!--  HeMan -->
+			</div>
 			<div class="col-sm-6">
 				<h1>Create a comment</h1>
 				<div id="validationerrors">
@@ -77,7 +76,7 @@ img {
 						</dd>
 						<dt>Add your comment:</dt>
 						<dd>
-							<g:textArea name="comment" value="${comment.comment}" rows="20"
+							<g:textArea name="commentContent" value="${comment.commentContent}" rows="20"
 								cols="50" />
 						</dd>
 					</dl>
@@ -86,7 +85,7 @@ img {
 			</div>
 
 			<div class="col-sm-4">
-				<br /> About me! <br /> More stuff to come!
+				<br /> About me! <br /> Bibidy Bobidy Buu
 			</div>
 		</div>
 	</div>
@@ -94,8 +93,8 @@ img {
 	<footer role="contentInfo">
 		<div class="footer">
 			<p>
-				<small>Copyright &copy; Manifest Solutions 2014, Written by
-					Aaron Chancey and John Leonardo</small>
+				<small>Copyright &copy; Manifest Solutions 2015, Written by
+					Caleb Thornton & Garrick Servello </small>
 			</p>
 		</div>
 	</footer>

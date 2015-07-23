@@ -12,7 +12,7 @@ class CommentSpec extends Specification {
 
 	
 	void 'test commentContent'(){
-		when 'a valid name is written':
+		when: 'a valid name is written'
 		def comment = new Comment(commentContent: 'This test is testless. I could test a better test in my test.')
 		
 		then:'check that it is valid'

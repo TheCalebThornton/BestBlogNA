@@ -53,7 +53,7 @@ class PostController {
 	}
 	def delete = {
 		def post = loadPost(params.id)
-		if(post.delete(flush: true)) {
+		if(!post.delete(flush: true)) {
 			redirect(action:'list')
 		} else {
 			render(view:'edit', model:[post:post])

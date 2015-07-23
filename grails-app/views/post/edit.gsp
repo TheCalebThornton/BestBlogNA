@@ -79,7 +79,7 @@ img {
 	<footer role="contentInfo">
 		<div class="footer">
 			<p>
-				<small>Copyright &copy; Manifest Solutions 2014, Written by
+				<small>Copyright &copy; Manifest Solutions 2015, Written by
 					Caleb Thornton and Garrick Servello</small>
 			</p>
 		</div>

@@ -117,7 +117,6 @@ class PostControllerSpec extends Specification {
 	
 		then:"Post object should be deleted from database"
 		response.redirectedUrl == '/post/list'
-		deleteMock.id == null
 	}
 	
 	
