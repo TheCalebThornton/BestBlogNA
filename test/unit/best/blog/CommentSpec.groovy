@@ -12,21 +12,21 @@ class CommentSpec extends Specification {
 
 	
 	void 'test commentContent'(){
-		when:
+		when 'a valid name is written':
 		def comment = new Comment(commentContent: 'This test is testless. I could test a better test in my test.')
 		
-		then:
+		then:'check that it is valid'
 		comment.validate(["commentContent"])
 		
-		when:
+		when:'name is null'
 		comment.commentContent = ''
 		
-		then:
+		then:'it should be invalid'
 		!comment.validate(["commentContent"])
 		
 		
-		
-		when:
+		 
+		when: 'the comment exceeds 200 characters'
 		StringBuffer buffInput = new StringBuffer()
 		int i;
 		for(i=0;i<41;i++){
@@ -35,7 +35,7 @@ class CommentSpec extends Specification {
 		comment = new Comment(commentContent: buffInput.toString())
 
 		
-		then:
+		then:'it should be invalid'
 		!comment.validate(["commentContent"])	
 		
 	}
@@ -44,9 +44,9 @@ class CommentSpec extends Specification {
 	
 	
     void 'test date'() {
-		when:
+		when:'a null date is written'
 		def comment = new Comment(dateCreated: null)
-		then:
+		then:'it should be still be valid'
 		comment.validate(["dateCreated"])
 			}
 }
