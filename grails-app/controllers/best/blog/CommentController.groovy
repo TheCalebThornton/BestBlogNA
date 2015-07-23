@@ -14,7 +14,7 @@ class CommentController {
         def comment = new Comment(params)
         comment.dateCreated = new Date();
         comment.post = Post.get(params.postId)
-        if(comment.save()) {
+        if(comment.save(flush: true)) {
             redirect(
                     controller:'post',
                     action:'view',
