@@ -19,6 +19,6 @@ class Comment implements Comparable{
 	}
 	
 	public int compareTo(Object o){
-		return dateCreated.compareTo(o.dateCreated)
+		return dateCreated <=> (o.dateCreated)
 	}
 }

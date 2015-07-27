@@ -23,27 +23,6 @@ class PostController {
 					order:'desc'), postCount:Post.count(), offset:'0'])
 	}
 
-	
-//	def save = {
-//		def editPost = params
-//		def post = loadPost(params.id)
-//		post.postName = editPost.postName
-//		post.postContent = editPost.postContent
-//		post.teaser = editPost.teaser
-//		if (editPost.isPublished == null){
-//			post.isPublished = false
-//		}
-//		else{
-//			post.isPublished = editPost.isPublished
-//		}
-//		post.comments = null
-//
-//		if(post.save(flush: true)) {
-//			redirect(action:'list')
-//		} else {
-//			render(view:'edit', model:[post:post])
-//		}
-//	}
 	//REKT
 	def save = { 
 		def post = loadPost(params.id) 

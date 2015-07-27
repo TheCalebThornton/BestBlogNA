@@ -24,7 +24,6 @@ class PostSpec extends Specification {
 	void "Test that name must not be empty"() {
 		when: 'the name contains nothing'
 		def p = new Post(postName: '')
-
 		then: 'validation should fail'
 		!p.validate(["postName"])
 

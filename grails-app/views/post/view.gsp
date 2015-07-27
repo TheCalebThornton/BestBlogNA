@@ -55,8 +55,8 @@ img {
 					${post.postContent}
 				</div>
 				<g:link controller="post" action="edit" id="${post.id}">
-          <button type="button">Edit this post</button> 
-          </g:link>
+          		<button type="button">Edit this post</button> 
+          		</g:link>
 				<div>
 					<g:link controller="comment" action="edit" id="${post.id}"><button type="button">Add Comment</button> </g:link>
 					<g:if test="${post.comments.isEmpty()}">
@@ -74,6 +74,7 @@ img {
 									on
 									${comment.dateCreated}
 								</p>
+								<g:link controller="comment" action="delete" id="${comment.id}">Delete Comment</g:link>
 							</div>
 						</g:each>
 					</g:else>
