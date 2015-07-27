@@ -1,16 +1,17 @@
-
 <%@ page contentType="text/html;charset=UTF-8"%>
 <html>
 <head>
 <title>Best Blog NA</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="/BlogSite/css/styles.css">
-<link rel="stylesheet" href="/BlogSite/css/simplePagination.css">
+<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
+<link rel="stylesheet" href="${resource(dir: 'css', file: 'simplePagination.css')}" type="text/css">
 
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -25,11 +26,10 @@ img {
 </style>
 <link rel="shortcut icon" href="${assetPath(src: 'favicon.ico')}"
 	type="image/x-icon">
-
 </head>
-<body>
-	<header role="banner">
-		<nav role="navigation" class="navbar navbar-static-top navbar-default">
+<body class ="landing">
+	<header role="header" id="header" class="alt">
+		<!--<nav role="navigation" class="navbar navbar-static-top navbar-default">
 			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -42,7 +42,7 @@ img {
 
 				</div>
 			</div>
-		</nav>
+		</nav>-->
 	</header>
 	<main role="main">
 	<div class="container-fluid">
@@ -54,11 +54,11 @@ img {
 				</div>
 				
 				Search:
-				<input type="text" id="search">
+				<input type="text" id="searchCustom">
 				<br />
-					<g:link controller="post" action="edit"><button type="button">Create a new post</button>  </g:link>
+					<g:link controller="post" action="edit"><button class = "button small" type="button">Create a new post</button>  </g:link>
 				<br />
-				<h1>My Posts</h1>
+				<h2>My Posts</h2>
 				
 				
 				<g:each in="${posts}" var="post">
@@ -67,22 +67,25 @@ img {
 						<%--<g:set var="linkTitle" value="${post.postName}"></g:set>--%>
 						<g:javascript>linkTitle = "${post.postName}".replace(/\s/g, ''); </g:javascript>
 						<g:link controller="post" action="view" id="${post.id}" elementId="${post.id}" params='[title:"${post.postName}".replaceAll('\\s+','-')]'>
+						<section id="blogCustom" class="wrapper special">
+
 							<h2>
 								${post.postName}
 							</h2>
-						</g:link>
-						<p>
-							${post.teaser}
-						</p>
-						<p>
-							Last Updated:
-							${post.lastUpdated}
-						</p>
+							</g:link>
+							<p>
+								${post.teaser}
+							</p>
+							<h6>
+								Last Updated:
+								${post.lastUpdated}
+							</h6>
+							
 						<g:link controller="post" action="edit" id="${post.id}">
-          <button type="button">Edit post </button>
-          </g:link>
-						<g:link controller="post" action="view" id="${post.id}"><button type="button">View Comments</button></g:link>
-
+          					<button class = "button small" type="button">Edit post </button>
+          				</g:link>
+						<g:link controller="post" action="view" id="${post.id}"><button class = "button small" type="button">View Comments</button></g:link>
+						</section>
 					</div>
 				</g:each>
 				<p></p>
@@ -103,7 +106,13 @@ img {
 			</p>
 		</div>
 	</footer>
-
+	
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
 <script>
 	$(document).ready(function(){
 
@@ -129,7 +138,7 @@ img {
 		    });
 		});
 		
-		$("#search").keyup(function(){
+		$("#searchCustom").keyup(function(){
 			 var val = $(this).val().toLowerCase();
 			 $(".singlepost").hide();
 			 

@@ -3,13 +3,15 @@
 <head>
 <title>Create Comment</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="/BlogSite/css/styles.css">
-
+<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script
@@ -36,7 +38,7 @@ img {
 				</div>
 	<!--			<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
-						<li><a href="/BlogSite/">Home</a></li>
+						<li><a href="/BestBlogNA/">Home</a></li>
 						<li><g:if test="${session.user}">
 								<g:link controller="user" action="logout">Logout</g:link>
 							</g:if> <g:else>
@@ -55,32 +57,32 @@ img {
 			<!--  HeMan -->
 			</div>
 			<div class="col-sm-6">
-				<h1>Create a comment</h1>
+				<h3>Create a comment</h3>
 				<div id="validationerrors">
 					<g:renderErrors bean="${comment}" />
 				</div>
 				<g:form controller="comment" action="save">
 					<g:hiddenField name="postId" value="${postId}" />
-					<dl>
-						<dt>Your name:</dt>
+					<dl class="row uniform 50%">
+						<dt class="6u 12u$(xsmall)">Your name:</dt>
 						<dd>
 							<g:textField name="who.name" value="${comment.who.name}" />
 						</dd>
-						<dt>Your email:</dt>
+						<dt class="6u 12u$(xsmall)">Your email:</dt>
 						<dd>
 							<g:textField name="who.email" value="${comment.who.email}" />
 						</dd>
-						<dt>Your website/blog:</dt>
+						<dt class="6u 12u$(xsmall)">Your website/blog:</dt>
 						<dd>
 							<g:textField name="who.url" value="${comment.who.url}" />
 						</dd>
-						<dt>Add your comment:</dt>
+						<dt class="6u 12u$(xsmall)">Add your comment:</dt>
 						<dd>
 							<g:textArea name="commentContent" value="${comment.commentContent}" rows="20"
 								cols="50" />
 						</dd>
 					</dl>
-					<g:submitButton name="submit" value="Save" />
+					<g:submitButton name="submit" value="Save" class="special" />
 				</g:form>
 			</div>
 

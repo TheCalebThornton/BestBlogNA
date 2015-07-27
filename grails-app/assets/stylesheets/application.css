@@ -11,3 +11,5 @@
 *= require mobile
 *= require_self
 */
+require main
+require mobile
