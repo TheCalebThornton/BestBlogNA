@@ -38,7 +38,6 @@ class PostController {
 			render(view:'edit', model:[post:post])
 		}
 	}
-	
 	def view = {
 		render(view:'view', model:[post:Post.get(params.id)])
 	}

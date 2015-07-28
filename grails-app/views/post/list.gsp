@@ -38,14 +38,13 @@ img {
 							class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/best-blog-NA/">Best Blog NA</a>
-
 				</div>
 			</div>
 		</nav>-->
 	</header>
 	<main role="main">
 	<div class="container-fluid">
+			<a href="/best-blog-NA/" class="image fit" id="logo"><img src="${resource(dir: 'images', file: 'Blog_Logo.bmp')}" alt="Best Blog NA" /></a>
 		<div class="row">
 			<div class="col-sm-2"></div>
 			<div id="allposts" class="col-sm-6">
@@ -91,9 +90,6 @@ img {
 				<p></p>
 				<div class="simple-pagination" id="pagination" >
 				</div>
-			</div>
-			<div class="col-sm-4 sidebar-nav" id="sidebar">
-				<br /> About me! <br /> Best blogalog NA
 			</div>
 		</div>
 	</div>

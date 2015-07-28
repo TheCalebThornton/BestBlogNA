@@ -26,21 +26,21 @@ img {
 </head>
 <body class ="landing" >
 	<header role="banner" >
-		<nav role="navigation" class="navbar navbar-static-top navbar-default">
+	<a class="navbar-brand" href="/best-blog-NA/">Best Blog NA</a>
+		<!--<nav role="navigation" class="navbar navbar-static-top navbar-default">
 			<div class="container" >
-				<!--<div class="navbar-header">
+				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse"
 						data-target=".navbar-collapse">
 						<span class="sr-only">Toggle Navigation</span> <span
 							class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
-					</div>-->
-					<a class="navbar-brand" href="/best-blog-NA/">Best Blog NA</a>
-
+					</div>
+					
 				
 			</div>
-		</nav>
+		</nav>-->
 	</header>
 	<main role="main">
 	<div class="container-fluid">

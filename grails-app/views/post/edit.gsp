@@ -23,7 +23,8 @@ img {
 </head>
 <body>
 	<header role="banner">
-		<nav role="navigation" class="navbar navbar-static-top navbar-default">
+	<a class="navbar-brand" href="/best-blog-NA/">Best Blog NA</a>
+		<!--<nav role="navigation" class="navbar navbar-static-top navbar-default">
 			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -32,11 +33,10 @@ img {
 							class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/best-blog-NA/">Best Blog NA</a>
 
 				</div>
 			</div>
-		</nav>
+		</nav>-->
 	</header>
 	<main role="main">
 	<div class="container-fluid">

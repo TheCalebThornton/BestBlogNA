@@ -1,5 +1,4 @@
 TODO:
-FIX ISSUE: Create post not working
 Edit CSS/Bootstrap fields
 Make it look pretty
 Perfect ATDD tests with Watir

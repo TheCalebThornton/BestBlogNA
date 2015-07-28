@@ -24,7 +24,8 @@ img {
 </head>
 <body>
 	<header role="banner">
-		<nav role="navigation" class="navbar navbar-static-top navbar-default">
+		<a class="navbar-brand" href="/best-blog-NA/">Best Blog NA</a>
+		<!--<nav role="navigation" class="navbar navbar-static-top navbar-default">
 			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -33,10 +34,9 @@ img {
 							class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/best-blog-NA/">Best Blog NA</a>
-
 				</div>
-	<!--			<div class="collapse navbar-collapse">
+		
+					<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
 						<li><a href="/BestBlogNA/">Home</a></li>
 						<li><g:if test="${session.user}">
@@ -46,9 +46,9 @@ img {
 							</g:else></li>
 						<%--<li><a href="adultlink.html">Adult Link</a></li>--%>
 					</ul>
-				</div> -->
+				</div>
 			</div>
-		</nav>
+		</nav>-->
 	</header>
 	<main role="main">
 	<div class="container-fluid">
@@ -78,11 +78,12 @@ img {
 						</dd>
 						<dt class="6u 12u$(xsmall)">Add your comment:</dt>
 						<dd>
-							<g:textArea name="commentContent" value="${comment.commentContent}" rows="20"
-								cols="50" />
+							<g:textArea name="commentContent" value="${comment.commentContent}" rows="5"
+								cols="150" />
 						</dd>
 					</dl>
-					<g:submitButton name="submit" value="Save" class="special" />
+					<br />
+					<g:submitButton name="submit" value="Save" />
 				</g:form>
 			</div>
 
