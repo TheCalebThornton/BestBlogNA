@@ -8,7 +8,7 @@ class UrlMappings {
         }
 
 		//"/post/view/$postName?" (controller:"post", action:"view")
-		"/$postName" {
+		"/view/$postName" {
 			controller="post"
 			action = "view"
 		}

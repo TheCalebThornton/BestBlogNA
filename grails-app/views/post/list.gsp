@@ -44,7 +44,7 @@ img {
 	</header>
 	<main role="main">
 	<div class="container-fluid">
-			<a href="/best-blog-NA/" class="image fit" id="logo"><img src="${resource(dir: 'images', file: 'Blog_Logo.bmp')}" alt="Best Blog NA" /></a>
+			<a href="/best-blog-NA/" class="image fit" id="logo"><img src="${resource(dir: 'images', file: 'Better_Logo.bmp')}" alt="Best Blog NA" /></a>
 		<div class="row">
 			<div class="col-sm-2"></div>
 			<div id="allposts" class="col-sm-6">
@@ -53,9 +53,9 @@ img {
 				</div>
 				
 				Search:
-				<input type="text" id="searchCustom">
+				<input type="text" id="searchCustom" name="search">
 				<br />
-					<g:link controller="post" action="edit"><button class = "button small" type="button">Create a new post</button>  </g:link>
+					<g:link controller="post" action="edit"><button id="create" class = "button small" type="button">Create a new post</button>  </g:link>
 				<br />
 				<h2>My Posts</h2>
 				

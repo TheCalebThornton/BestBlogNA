@@ -23,7 +23,6 @@ img {
 </head>
 <body>
 	<header role="banner">
-	<a class="navbar-brand" href="/best-blog-NA/">Best Blog NA</a>
 		<!--<nav role="navigation" class="navbar navbar-static-top navbar-default">
 			<div class="container">
 				<div class="navbar-header">
@@ -40,6 +39,7 @@ img {
 	</header>
 	<main role="main">
 	<div class="container-fluid">
+		<a href="/best-blog-NA/" class="image fit" id="logo"><img src="${resource(dir: 'images', file: 'Better_Logo.bmp')}" alt="Best Blog NA" /></a>
 		<div class="row">
 			<div class="col-sm-2"></div>
 			<div class="col-sm-6">
@@ -69,7 +69,7 @@ img {
 						</dd>
 					</dl>
 					<g:submitButton name="submit" value="Save"/>
-					<g:actionSubmit name="delete" action="delete" value="Delete"/>
+					<g:actionSubmit name="delete" value="Delete"/>
 				</g:form>
 			</div>
 			<div class="col-sm-4">

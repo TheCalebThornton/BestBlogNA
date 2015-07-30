@@ -26,7 +26,6 @@ img {
 </head>
 <body class ="landing" >
 	<header role="banner" >
-	<a class="navbar-brand" href="/best-blog-NA/">Best Blog NA</a>
 		<!--<nav role="navigation" class="navbar navbar-static-top navbar-default">
 			<div class="container" >
 				<div class="navbar-header">
@@ -44,12 +43,13 @@ img {
 	</header>
 	<main role="main">
 	<div class="container-fluid">
+		<a href="/best-blog-NA/" class="image fit" id="logo"><img src="${resource(dir: 'images', file: 'Better_Logo.bmp')}" alt="Best Blog NA" /></a>
 		<div class="row">
 			<div class="col-sm-2"></div>
 			<div class="col-sm-6" id="content">
-				<g:link controller="post" action="edit"><button class = "button small" type="button">Create a new post</button>  </g:link>
-		
-				<h1>
+				<g:link controller="post" action="edit"><button id="create" class = "button small" type="button">Create a new post</button>  </g:link>
+				<br /><br />
+				<h1 id="postTitle">
 					${post.postName}
 				</h1>
 				<p>
@@ -61,7 +61,8 @@ img {
 				<g:link controller="post" action="edit" id="${post.id}">
           		<button type="button" class = "button small">Edit this post</button> 
           		</g:link>
-				<div>
+          		<br /><br />
+				<div id="commentContainer">
 					<g:link controller="comment" action="edit" id="${post.id}"><button type="button" class = "button small">Add Comment</button> </g:link>
 					<g:if test="${post.comments.isEmpty()}">
 					</g:if>
