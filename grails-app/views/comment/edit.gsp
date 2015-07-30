@@ -42,9 +42,7 @@ img {
 								<g:link controller="user" action="logout">Logout</g:link>
 							</g:if> <g:else>
 								<g:link controller="user" action="login">Login</g:link>
-							</g:else></li>
-						<%--<li><a href="adultlink.html">Adult Link</a></li>--%>
-					</ul>
+						</ul>
 				</div>
 			</div>
 		</nav>-->

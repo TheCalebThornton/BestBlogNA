@@ -53,7 +53,7 @@ img {
 				</div>
 				
 				Search:
-				<input type="text" id="searchCustom" name="search">
+				<input type="text" id="searchCustom" name="search"> 			
 				<br />
 					<g:link controller="post" action="edit"><button id="create" class = "button small" type="button">Create a new post</button>  </g:link>
 				<br />
@@ -96,10 +96,9 @@ img {
 	</main>
 	<footer role="contentInfo">
 		<div class="footer">
-			<p>
-				<small>Copyright &copy; Manifest Solutions 2014, Written by
-					Caleb Thornton and Garrick Servello</small>
-			</p>
+		<a href="https://www.youtube.com/watch?v=0M9cypF0Pyk"id="secretLink">
+		<p><small>Copyright &copy; Manifest Solutions 2014, Written by
+					Caleb Thornton and Garrick Servello</small></p></a>
 		</div>
 	</footer>
 	
