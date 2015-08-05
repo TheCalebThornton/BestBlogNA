@@ -63,26 +63,18 @@ img {
           		</g:link>
           		<br /><br />
 				<div id="commentContainer">
-					<g:link controller="comment" action="edit" id="${post.id}"><button type="button" class = "button small">Add Comment</button> </g:link>
+					<!--<g:link controller="comment" action="edit" id="${post.id}"><button type="button" class = "button small">Add Comment</button> </g:link>-->
 					<g:if test="${post.comments.isEmpty()}">
 					</g:if>
 					<g:else>
-						<h5>Comments:</h5>
-						<g:each in="${post.comments}" var="comment">
-							<div class="comment">
-								<p>
-									${comment.commentContent}
-								</p>
-								<p>
-									Made by:
-									${comment.who.name}
-									on
-									${comment.dateCreated}
-								</p>
-								<g:link controller="comment" action="delete" id="${comment.id}">Delete Comment</g:link>
-							</div>
-						</g:each>
+					<h5>Comments:</h5>	
+					<div id="comment">		
+						<g:render template="../comment/commentList" model="[post:post]"/>
+					</div>
 					</g:else>
+				</div>
+				<div class="col-sm-6">
+					<g:render template="./templates/addCommentForm"/>
 				</div>
 			</div>
 			<div class="col-sm-4">

@@ -11,16 +11,12 @@ class PostController {
 		}
 		render(view:'edit', model:[post:post])
 	}
-
-//	def postList = {
-//		[posts: Post.list(params), postCount: Post.count()]	
-//	}
 	
 	def list = {
 		render(
 				view:'list',
 				model:[posts:Post.list(sort:'lastUpdated',
-					order:'desc'), postCount:Post.count(), offset:'0'])
+					order:'desc'), postCount:Post.count()])
 	}
 
 	//REKT
@@ -39,7 +35,8 @@ class PostController {
 		}
 	}
 	def view = {
-		render(view:'view', model:[post:Post.get(params.id)])
+		render(view:'view', model:[post:Post.get(params.id),
+			comment:new Comment()])	
 	}
 	
 	//Creates instance of Post with specific ID

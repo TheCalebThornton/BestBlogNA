@@ -4242,7 +4242,14 @@
 	border-style: solid;
 	border-color: black;
 }
-#topNav{
-	background-color: black;
-	color: white;
+a{
+	color: black;
+}
+.comment{
+    border-width: medium;
+    border-style: solid;
+    border-color: black;
+	background-color: green;
+	margin-bottom: 15px;
+	padding: 10px;
 }
